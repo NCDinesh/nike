@@ -7,7 +7,9 @@
 
 > This project is a comprehensive guide to Nike’s offerings, showcasing our popular products, special offers, trending items, services, and customer testimonials. It serves as a one-stop resource for understanding what makes Nike a leader in sportswear and lifestyle innovation.
 
-## Install
+# Implementing the project
+
+## Clone
 
 ```sh
 git clone https://github.com/NCDinesh/nike.git
