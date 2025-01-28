@@ -1,47 +1,45 @@
-import React from "react";
+import { Nav } from "./components";
 import {
-  Hero,
-  Footer,
   CustomerReviews,
+  Footer,
+  Hero,
+  PopularProducts,
   Services,
-  Superquality,
-  Popular,
+  SpecialOffer,
   Subscribe,
-  Special,
-} from "./section";
-import Navbar from "./components/Navbar";
+  SuperQuality,
+} from "./sections";
 
-const App = () => (
-  <main className="relative">
-    <Navbar> </Navbar>
-    <section className="xl:padding-l wide:padding-r padding-b">
-      <Hero></Hero>
-    </section>
-
-    <section className="padding">
-      <Popular> </Popular>
-    </section>
-
-    <section className="padding">
-      <Superquality></Superquality>
-    </section>
-    <section className="padding-x py-10">
-      <Services />
-    </section>
-    <section className="padding">
-      {" "}
-      <Special />{" "}
-    </section>
-    <section className="bg-pale-blue padding ">
-      <CustomerReviews />
-    </section>
-    <section className="padding-x sm:py-32 py-16 w-full">
-      <Subscribe />
-    </section>
-    <section className="padding bg-black padding-x padding-t pb-8">
-      <Footer />
-    </section>
-  </main>
-);
+const App = () => {
+  return (
+    <main className='relative'>
+      <Nav />
+      <section className='xl:padding-l wide:padding-r padding-b'>
+        <Hero />
+      </section>
+      <section className='padding'>
+        <PopularProducts />
+      </section>
+      <section className='padding'>
+        <SuperQuality />
+      </section>
+      <section className='padding-x py-10'>
+        <Services />
+      </section>
+      <section className='padding'>
+        <SpecialOffer />
+      </section>
+      <section className='bg-pale-blue padding'>
+        <CustomerReviews />
+      </section>
+      <section className='padding-x sm:py-32 py-16 w-full'>
+        <Subscribe />
+      </section>
+      <section className=' bg-black padding-x padding-t pb-8'>
+        <Footer />
+      </section>
+    </main>
+  );
+};
 
 export default App;
