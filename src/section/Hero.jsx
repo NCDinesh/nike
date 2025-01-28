@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Button from "../components/Button";
 import { arrowRight } from "../assets/icons";
 import { shoes, statistics } from "../constants";
@@ -6,6 +6,7 @@ import { bigShoe1 } from "../assets/images";
 import ShoeCard from "../components/ShoeCard";
 
 const Hero = () => {
+  const [bigShoeImg, setBigShoeImg] = useState(bigShoe1);
   return (
     <section
       className="w-full  max-container gap-10 min-h-screen xl:flex-row flex-col justify-center flex"
@@ -43,7 +44,7 @@ const Hero = () => {
 
       <div className="flex justify-center items-center flex-1 xl:min-h-screen max-xl:pb-40 max-xl:pt-20 bg-primary bg-hero bg-cover bg-center relative   ">
         <img
-          src={bigShoe1}
+          src={bigShoeImg}
           alt="bigshoe1"
           width={550}
           className="object-contain relative z-10 lg:mb-20"
@@ -54,8 +55,10 @@ const Hero = () => {
             <div key={shoe}>
               <ShoeCard
                 imgURL={shoe}
-                changeBigShoeImage={() => {}}
-                bigShoeImg=""
+                changedBigShoeImage={(shoe) => {
+                  setBigShoeImg(shoe);
+                }}
+                bigShoeImg={bigShoeImg}
               />
             </div>
           ))}

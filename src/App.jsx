@@ -5,6 +5,7 @@ import {
   CustomerReviews,
   Services,
   Superquality,
+  Popular,
   Subscribe,
   Special,
 } from "./section";
@@ -13,8 +14,12 @@ import Navbar from "./components/Navbar";
 const App = () => (
   <main className="relative">
     <Navbar> </Navbar>
-    <section className="xl:padding-x wide:padding-r padding-b">
+    <section className="xl:padding-l wide:padding-r padding-b">
       <Hero></Hero>
+    </section>
+
+    <section className="padding">
+      <Popular> </Popular>
     </section>
 
     <section className="padding">
